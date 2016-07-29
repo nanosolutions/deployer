@@ -4,7 +4,9 @@ return [
 
     'label'               => 'Notifications',
     'slack'               => 'Slack Notifications',
+    'hook'                => 'Webhook Notifications',
     'create'              => 'Add a new slack notification',
+    'create_hook'         => 'Add a new webhook notification',
     'edit'                => 'Edit the slack notification',
     'none'                => 'The project does not currently have any slack notifications setup',
     'name'                => 'Name',
