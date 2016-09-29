@@ -200,6 +200,9 @@ class InstallApp extends Command
             $config = preg_replace('/TRUSTED_PROXIES=(.*)[\n]/', '', $config);
         }
 
+        // Remove comments
+        $config = preg_replace('/#(.*)[\n]/', '', $config);
+
         return file_put_contents($path, trim($config) . PHP_EOL);
     }
 
@@ -623,21 +626,22 @@ class InstallApp extends Command
             }
         }
 
-        $required_one = ['nodejs', 'node'];
-        $found = true;
+        $required_one = ['node', 'nodejs'];
+        $found = false;
         foreach ($required_one as $command) {
             $process = new Process('which ' . $command);
             $process->setTimeout(null);
             $process->run();
 
-            if (!$process->isSuccessful()) {
-                $found = false;
-                $errors = true;
+            if ($process->isSuccessful()) {
+                $found = true;
+                break;
             }
         }
 
         if (!$found) {
             $this->error('node.js was not found');
+            $errors = true;
         }
 
         // Files and directories which need to be writable
@@ -692,8 +696,8 @@ class InstallApp extends Command
     {
         $available = collect(PDO::getAvailableDrivers());
 
-        return $available->intersect(['mysql', 'sqlite', 'pgsql', 'sqlsrv'])
-                         ->all();
+        return array_values($available->intersect(['mysql', 'sqlite', 'pgsql', 'sqlsrv'])
+                         ->all());
     }
 
     /**

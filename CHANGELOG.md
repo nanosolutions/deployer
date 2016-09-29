@@ -1,7 +1,39 @@
 # Change Log
 
-## [0.0.37](https://github.com/REBELinBLUE/deployer/tree/0.0.37) (2016-05-30)
-[Full Changelog](https://github.com/REBELinBLUE/deployer/compare/0.0.35...0.0.37)
+## [0.0.39](https://github.com/REBELinBLUE/deployer/tree/0.0.39) (2016-09-06)
+[Full Changelog](https://github.com/REBELinBLUE/deployer/compare/0.0.38...0.0.39)
+
+**Implemented enhancements:**
+
+- Automatically detect and restart php-fpm [\#238](https://github.com/REBELinBLUE/deployer/pull/238) ([REBELinBLUE](https://github.com/REBELinBLUE))
+- Access control lists/User levels [\#236](https://github.com/REBELinBLUE/deployer/pull/236) ([REBELinBLUE](https://github.com/REBELinBLUE))
+
+## [0.0.38](https://github.com/REBELinBLUE/deployer/tree/0.0.38) (2016-08-21)
+[Full Changelog](https://github.com/REBELinBLUE/deployer/compare/0.0.37...0.0.38)
+
+**Fixed bugs:**
+
+- usort: Array was modified by the user comparison function [\#258](https://github.com/REBELinBLUE/deployer/issues/258)
+
+## [0.0.37](https://github.com/REBELinBLUE/deployer/tree/0.0.37) (2016-08-06)
+[Full Changelog](https://github.com/REBELinBLUE/deployer/compare/0.0.36...0.0.37)
+
+**Implemented enhancements:**
+
+- Update the deployment log whilst viewing it [\#232](https://github.com/REBELinBLUE/deployer/issues/232)
+- Ignore suggestions when installing Composer deps [\#252](https://github.com/REBELinBLUE/deployer/pull/252) ([jbrooksuk](https://github.com/jbrooksuk))
+- Prioritise WS for optimal transport [\#250](https://github.com/REBELinBLUE/deployer/pull/250) ([denji](https://github.com/denji))
+
+**Fixed bugs:**
+
+- --warning option don't exist on all versions of tar [\#257](https://github.com/REBELinBLUE/deployer/issues/257)
+- Fatal error if git tags contain a string which is not a valid version [\#256](https://github.com/REBELinBLUE/deployer/issues/256)
+- Installer should check for node or nodejs [\#230](https://github.com/REBELinBLUE/deployer/issues/230)
+- Installer gets into an infinite loop if there are PDO drivers loaded before MySQL [\#254](https://github.com/REBELinBLUE/deployer/pull/254) ([moxx](https://github.com/moxx))
+- Incorrect Lang variables [\#239](https://github.com/REBELinBLUE/deployer/pull/239) ([uLow](https://github.com/uLow))
+
+## [0.0.36](https://github.com/REBELinBLUE/deployer/tree/0.0.36) (2016-05-30)
+[Full Changelog](https://github.com/REBELinBLUE/deployer/compare/0.0.35...0.0.36)
 
 **Fixed bugs:**
 
